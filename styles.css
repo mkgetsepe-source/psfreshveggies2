@@ -1,0 +1,278 @@
+/* =========================================================
+   PS Fresh Veggies Corner - styles.css
+   Assessment 8: Responsive Web Design (mobile-first)
+   Breakpoints: mobile (default) / tablet 600px+ / desktop 1024px+ / large desktop 1440px+
+   ========================================================= */
+
+/* ---------- CSS RESET ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, ul, li, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #fafafa;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav li {
+  width: 100%;
+  border-bottom: 1px solid #ffffff33;
+}
+
+nav li a {
+  display: block;
+  padding: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile {
+  display: block;
+}
+
+.tablet-desktop {
+  display: none;
+}
+
+.mobile h3 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+main {
+  padding: 1rem;
+}
+
+main ul {
+  margin: 0 0 1rem 1.25rem;
+}
+
+.home-intro {
+  background-color: #e8f5e9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+h4.mobile a {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+iframe.map {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+main.grid article {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+main.grid article h3 {
+  text-align: center;
+}
+
+main.grid article img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.grid article:nth-of-type(2) {
+  background-color: #f1f8e9;
+}
+
+main.grid article ul {
+  margin-left: 1.25rem;
+}
+
+main.grid aside {
+  background-color: #fff3e0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+main.grid article h3 {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+  .tablet-desktop {
+    display: block;
+  }
+
+  header {
+    position: static;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li {
+    width: auto;
+    border-bottom: none;
+    border-right: 1px solid #ffffff55;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  iframe.map {
+    width: 500px;
+    height: 350px;
+  }
+
+  #special-offer {
+    background: linear-gradient(135deg, #a5d6a7, #2e7d32);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  main.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  main.grid aside,
+  main.grid article:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  nav li a {
+    padding: 0.5rem 0.75rem;
+  }
+
+  nav li a:hover {
+    background-color: #ffffff33;
+    border-radius: 4px;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  main h2, main h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  main.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .home-intro {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    max-width: 1300px;
+  }
+
+  main.grid {
+    gap: 2rem;
+  }
+
+  header {
+    padding: 1.25rem 3rem;
+  }
+}
+
+@media print {
+  header nav,
+  iframe.map,
+  .mobile,
+  .tablet-desktop {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  main.grid {
+    display: block;
+  }
+}
