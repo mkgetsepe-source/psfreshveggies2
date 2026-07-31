@@ -193,7 +193,11 @@ main.grid article h3 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {main.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
   header {
     display: flex;
     align-items: center;
@@ -245,7 +249,10 @@ main.grid article h3 {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {main.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
   main {
     max-width: 1300px;
   }
