@@ -1,8 +1,8 @@
 /* =========================================================
-   PS Fresh Veggies Corner - styles.css
-   Assessment 8: Responsive Web Design (mobile-first)
-   Breakpoints: mobile (default) / tablet 600px+ / desktop 1024px+ / large desktop 1440px+
-   ========================================================= */
+    PS Fresh Veggies Corner - styles.css
+    Assessment 8: Responsive Web Design (mobile-first)
+    Breakpoints: mobile (default) / tablet 600px+ / desktop 1024px+ / large desktop 1440px+
+    ========================================================= */
 
 /* ---------- CSS RESET ---------- */
 *, *::before, *::after {
@@ -117,6 +117,7 @@ main.grid article {
 
 main.grid article h3 {
   text-align: center;
+  font-size: 1.2rem;
 }
 
 main.grid article img {
@@ -136,10 +137,6 @@ main.grid aside {
   background-color: #fff3e0;
   padding: 1rem;
   border-radius: 6px;
-}
-
-main.grid article h3 {
-  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -185,6 +182,7 @@ main.grid article h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    align-items: start;
   }
 
   main.grid aside,
@@ -193,13 +191,7 @@ main.grid article h3 {
   }
 }
 
-@media screen and (min-width: 1024px) {main.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-}
-}
+@media screen and (min-width: 1024px) {
   header {
     display: flex;
     align-items: center;
@@ -240,10 +232,8 @@ gap: 1rem;
 
   main.grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;main.grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-    }
+    gap: 1.5rem;
+    align-items: start;
   }
 
   .home-intro {
@@ -254,10 +244,7 @@ gap: 1rem;
   }
 }
 
-@media screen and (min-width: 1440px) {main.grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
+@media screen and (min-width: 1440px) {
   main {
     max-width: 1300px;
   }
@@ -288,3 +275,4 @@ gap: 1rem;
     display: block;
   }
 }
+
