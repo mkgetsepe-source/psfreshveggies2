@@ -196,7 +196,9 @@ main.grid article h3 {
 @media screen and (min-width: 1024px) {main.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1rem;grid-template-columns: repeat(2, 1fr);
+gap: 1rem;
+}
 }
   header {
     display: flex;
@@ -238,7 +240,10 @@ main.grid article h3 {
 
   main.grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.5rem;main.grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+    }
   }
 
   .home-intro {
